@@ -1,0 +1,43 @@
+{
+  "name": "coord-transform",
+  "version": "1.0.0",
+  "description": "坐标转换",
+  "main": "dist/coord-transform.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs",
+    "serve": "rollup -c rollup.config.mjs -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryry886/coord-transform.git"
+  },
+  "keywords": [
+    "wgs84",
+    "bd09",
+    "gcj02",
+    "coord",
+    "transform",
+    "坐标转换"
+  ],
+  "author": "ryry886",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ryry886/coord-transform/issues"
+  },
+  "homepage": "https://github.com/ryry886/coord-transform#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "rollup": "^3.20.0",
+    "rollup-plugin-serve": "^2.0.2"
+  },
+  "dependencies": {
+    "proj4": "^2.9.0"
+  }
+}

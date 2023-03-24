@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Display a map</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="/dist/coord-transform.js"></script>
+<style>
+	body { margin: 0; padding: 0; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<script  >
+
+    // let res = transform([110.1245,31.4515],"WGS84toGCJ02")
+    // console.log(res);
+    
+    let res2 = transform([[[114.331754,30.478323]]],{from:"BD09",to:"WGS84"})
+    console.log(res2);
+
+//     let res3 =transform([[[110.1245,31.4515],[110.1245,31.4515]]],"WGS84toGCJ02")
+//     console.log(res3);
+
+//     let res4 =transform([[[[110.1245,31.4515],[110.1245,31.4515]]]],"WGS84toGCJ02")
+//     console.log(res4);
+
+//     let res5 = transform({
+//   "type": "FeatureCollection",
+//   "features": [
+//     { "type": "Feature",
+//       "geometry": {"type": "Point", "coordinates": [110.1245,31.4515]},
+//       "properties": {
+//         "name": "Location A",
+//         "category": "Store"
+//       }
+//     },
+//     { "type": "Feature",
+//       "geometry": {"type": "Point", "coordinates": [-75.833, 39.284]},
+//       "properties": {
+//         "name": "Location B",
+//         "category": "House"
+//       }
+//     },
+//     { "type": "Feature",
+//       "geometry": {"type": "Point", "coordinates": [ -75.534, 39.123]},
+//       "properties": {
+//         "name": "Location C",
+//         "category": "Office"
+//       }
+//     }
+//   ]
+// },"WGS84toGCJ02")
+// console.log(res5);
+let res6 =transform(    {
+        "type": "Polygon",
+        "coordinates": [
+            [
+                [114.31919434833674, 30.47247919825233],
+                [114.32451616158562, 30.47247919825233],
+                [114.32451616158562, 30.46829951315877],
+                [114.31919434833674, 30.46829951315877],
+                [114.31919434833674, 30.47247919825233]
+            ]
+        ]
+    },{from:"WGS84",to:"GCJ02"})
+    console.log(res6);
+</script>
+ 
+</body>
+</html>
