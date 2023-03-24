@@ -1,5 +1,5 @@
 {
-  "name": "coord-transform",
+  "name": "@ryry886/coord-transform",
   "version": "1.0.0",
   "description": "坐标转换",
   "main": "dist/coord-transform.js",
