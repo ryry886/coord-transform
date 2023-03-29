@@ -22,6 +22,14 @@ transform([113.9612,31.315],{
     to:"EPSG:3857",
     proj4:true
 })
+//使用epsg 库的坐标系
+npm i epsg
+import epsg from "epsg"
+transform([37488855.08,3514760.39],{
+    from:epsg["EPSG:4525"],
+    to:"+proj=longlat +ellps=GRS80 +no_defs",
+    proj4:true,
+});
  ```
 ## 使用 
 ### NPM
