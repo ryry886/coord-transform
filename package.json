@@ -18,7 +18,8 @@
     "gcj02",
     "coord",
     "transform",
-    "坐标转换"
+    "坐标转换",
+    "proj4"
   ],
   "author": "ryry886",
   "license": "MIT",

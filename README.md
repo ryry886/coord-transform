@@ -16,6 +16,12 @@ transOption: {
                 to:"+proj=longlat +ellps=GRS80 +no_defs",
                 proj4:true
             }
+//使用proj4自带坐标系,详细看proj4
+transform([113.9612,31.315],{
+    from:"WGS84",
+    to:"EPSG:3857",
+    proj4:true
+})
  ```
 ## 使用 
 ### NPM
@@ -28,7 +34,10 @@ transform([114.331754,30.478323],{from:"WGS84",to:"GCJ02"})
 //传入嵌套数组
 transform([[114.331754,30.478323],[114.331754,30.478323]],{from:"BD09",to:"WGS84"})
 
-//传入geojson
+//geojson
+transform({"type": "Point", "coordinates": [114.331754,30.478323]},{from:"BD09",to:"GCJ02"})
+
+//使用proj4
 let option={
     from:"+proj=tmerc +lat_0=0 +lon_0=111 +k=1 +x_0=37500000 +y_0=0 +ellps=GRS80 +units=m   +no_defs",
     to:"+proj=longlat +ellps=GRS80 +no_defs",
