@@ -33,9 +33,9 @@ transform([37488855.08,3514760.39],{
  ```
 ## 使用 
 ### NPM
-npm install coord-transform
+npm i @ryry886/coord-transform
 ```
-import  transform  from "coord-transform"
+import  transform  from "@ryry886/coord-transform"
 //传入数组
 transform([114.331754,30.478323],{from:"WGS84",to:"GCJ02"})
 
